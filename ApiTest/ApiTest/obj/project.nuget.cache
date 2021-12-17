@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "2ZAKbJUcXfYYjhFYeZgmJROO9uWBniWh+M3HUJlhzvz15rxnIn16bAw9/Lfc3kgDD41dsWhuovbqR98vb8VYVA==",
+  "success": true,
+  "projectFilePath": "D:\\一些個人小專案\\CoreApiTest\\ApiTest\\ApiTest\\ApiTest.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\deliahong\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\deliahong\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.6\\fluentvalidation.aspnetcore.10.3.6.nupkg.sha512",
+    "C:\\Users\\deliahong\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\10.3.6\\fluentvalidation.dependencyinjectionextensions.10.3.6.nupkg.sha512",
+    "C:\\Users\\deliahong\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
