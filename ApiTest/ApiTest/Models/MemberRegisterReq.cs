@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ApiTest.Models
 {
-    public class RegisterMemberReq
+    public class MemberRegisterReq
     {
         public string Id { get; set; }
 
@@ -22,7 +22,7 @@ namespace ApiTest.Models
         public bool IsSubscript { get; set; }
     }
 
-    public class MemberValidator : AbstractValidator<RegisterMemberReq>
+    public class MemberValidator : AbstractValidator<MemberRegisterReq>
     {
         public MemberValidator()
         {

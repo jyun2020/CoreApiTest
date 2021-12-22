@@ -1,0 +1,15 @@
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\Infrastructure.deps.json
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\Infrastructure.dll
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\ref\Infrastructure.dll
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\Infrastructure.pdb
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.AssemblyReference.cache
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfoInputs.cache
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.AssemblyInfo.cs
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.dll
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\ref\Infrastructure.dll
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.pdb
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\ApplicationCore.dll
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\bin\Debug\net5.0\ApplicationCore.pdb
+D:\一些個人小專案\CoreApiTest\ApiTest\Infrastructure\obj\Debug\net5.0\Infrastructure.csproj.CopyComplete
