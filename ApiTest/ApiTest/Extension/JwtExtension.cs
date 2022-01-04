@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -17,15 +18,12 @@ namespace ApiTest.Extension
 {
     public class JwtExtension : SlightModuleConfigure
     {
-        public JwtExtension(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
-
-        public IConfiguration Configuration { get; }
-
         protected override void Load(IServiceCollection services)
         {
+            var serviceProvider = services.BuildServiceProvider();
+            var jwtOptions = serviceProvider.GetRequiredService<IOptions<JwtOption>>().Value;
+            var issuer = jwtOptions.iss;
+            var secret = jwtOptions.Secret;
             services
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -39,29 +37,23 @@ namespace ApiTest.Extension
                         NameClaimType = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier",
                         // 透過這項宣告，就可以從 "roles" 取值，並可讓 [Authorize] 判斷角色
                         RoleClaimType = "http://schemas.microsoft.com/ws/2008/06/identity/claims/role",
-
                         // 一般我們都會驗證 Issuer
                         ValidateIssuer = true,
-                        ValidIssuer = Configuration.GetValue<string>("JwtSettings:Iss"),
-
+                        ValidIssuer = issuer,
                         // 通常不太需要驗證 Audience
                         ValidateAudience = false,
                         //ValidAudience = "JwtAuthDemo", // 不驗證就不需要填寫
-
                         // 一般我們都會驗證 Token 的有效期間
                         ValidateLifetime = true,
-
                         // 如果 Token 中包含 key 才需要驗證，一般都只有簽章而已
                         ValidateIssuerSigningKey = false,
-
                         // "1234567890123456" 應該從 IConfiguration 取得
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration.GetValue<string>("JwtSettings:Secret")))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secret))
                     };
                 });
 
             services.AddTransient<IValidator<MemberRegisterReq>, MemberValidator>();
             services.AddSingleton<JwtHelper>();
-            services.Configure<JwtOption>(Configuration.GetSection("jwtSettings"));
         }
     }
 }
